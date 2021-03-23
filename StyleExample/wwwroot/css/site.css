@@ -48,3 +48,10 @@ a, .btn-link {
         right: 0.75rem;
         top: 0.5rem;
     }
+
+.my-custom-class {
+    background-color: hotpink;
+    border-color: black;
+    border: 10px dashed;
+    z-index: 999999
+}

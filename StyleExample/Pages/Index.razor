@@ -4,4 +4,20 @@
 
 Welcome to your new app.
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+<button @onclick="openModal">Click me!</button>
+
+@code {
+
+    [CascadingParameter]
+    public IModalService ModalService { get; set; }
+
+    private void openModal()
+    {
+        var options = new ModalOptions()
+        {
+            Class = "my-custom-class"
+        };
+
+        var modal = ModalService.Show<YesNoPrompt>("Enter title here!", options);
+    }
+}
